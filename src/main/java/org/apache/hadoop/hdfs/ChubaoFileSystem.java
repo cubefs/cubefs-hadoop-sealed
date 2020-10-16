@@ -513,7 +513,6 @@ public class ChubaoFileSystem extends FileSystem {
     if (log.isDebugEnabled()) {
       log.debug("setTimes:" + path.toString() + " mtime:" + mtime + " atime:" + atime);
     }
-    log.info("setTimes:" + path.toString() + " mtime:" + mtime + " atime:" + atime);
     try {
       storage.setTimes(parsePath(path), mtime, atime);
     } catch (CFSException ex) {

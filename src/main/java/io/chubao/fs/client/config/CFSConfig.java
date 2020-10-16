@@ -25,7 +25,6 @@ import java.util.Map;
 public class CFSConfig implements Serializable {
   public final static String CFS_SCHEME_NAME = "cfs";
   public final static int CFS_DEFAULT_PORT = 8888;
-  public final short CFS_DEFAULT_UMASK = 0022;
   public final short CFS_DEFAULT_FILE_PERMISSION = 0644;
   public final short CFS_DEFAULT_DIR_PERMISSION = 0644;
 
@@ -43,7 +42,6 @@ public class CFSConfig implements Serializable {
 
   private final String CFS_USER_HOME_DIR_PREFIX_KEY = "dfs.user.home.dir.prefix";
   private final String CFS_USER_HOME_DIR_PREFIX_DEFAULT = "/user";
-
   private final String CFS_CURRENT_USE_KEY = "cfs.current.user.name";
 
   private Map<String, String> configs = new HashMap<>();
@@ -87,20 +85,8 @@ public class CFSConfig implements Serializable {
     return configs.getOrDefault(CFS_LIBSDK_PATH_KEY, null);
   }
 
-  public int getLRUCache() {
-    return 100;
-  }
-
-  public String getChemeName() {
-    return CFS_SCHEME_NAME;
-  }
-
   public String getUserHomePrefix() {
     return configs.getOrDefault(CFS_USER_HOME_DIR_PREFIX_KEY, CFS_USER_HOME_DIR_PREFIX_DEFAULT);
-  }
-
-  public short getUMask() {
-    return CFS_DEFAULT_UMASK;
   }
 
   public short getFileDefaultPermission() {

@@ -18,17 +18,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.ByteBufferPool;
-import org.tukaani.xz.UnsupportedOptionsException;
 
 import java.io.IOException;
-import java.net.UnknownServiceException;
 import java.nio.ByteBuffer;
 import java.util.EnumSet;
 
 public class CFSDataInputStream extends FSInputStream implements ByteBufferReadable,
     HasEnhancedByteBufferAccess, CanUnbuffer {
   private static final Log log = LogFactory.getLog(CFSDataInputStream.class);
-
 
   private CFSInputStream input;
 

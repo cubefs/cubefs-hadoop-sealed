@@ -1,8 +1,20 @@
+# Compile
+`mvn package`
+
+Note:
+The following two jars  may not be found in the maven repository. You need to modify pom.xml to solve the dependency problem during compilation, you may  refer to the comment in pom.xml.
+
+1. libchubaofs-xx-SNAPSHOT.jar, building from chubaofs/java
+2. hadoop-common-3.0.0-tests.jar, from hadoop bin package(hadoop-3.3.0/share/hadoop/common/hadoop-common-3.3.0-tests.jar)
+
 # Deploy
 
-When using the SDK, you need to use two jars and two profiles.
- **Two jars:**
+When using the SDK, you need to use one so and two jars and two profiles.
 
+**One so:**
+1. libsdk.so, building from chubaofs/libsdk, used in cfs-site.xml.
+
+**Two jars:**
 1. chubaofs-hadoop-xx-SNAPSHOT.jar
 2. libchubaofs-xx-SNAPSHOT.jar
 
@@ -13,12 +25,12 @@ When using the SDK, you need to use two jars and two profiles.
 
 ## HDFS Shell on ChubaoFS
 
-1.  Put the two jars to $HADOOP_HOME/share/hadoop/common
+1. Put the two jars to $HADOOP_HOME/share/hadoop/common
 2. Put the two profiles to $HADOOP_HOME/etc/hadoop
 
 ## YARN on ChubaoFS
 
-1.  Put the two jars to $HADOOP_HOME/share/hadoop/common
+1. Put the two jars to $HADOOP_HOME/share/hadoop/common
 2. Put the two profiles to $HADOOP_HOME/etc/hadoop
 3. Start the yarn servers.
 

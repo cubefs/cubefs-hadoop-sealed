@@ -21,7 +21,7 @@
             <version>1.0-SNAPSHOT</version>
             <!--
             <scope>system</scope>
-            <systemPath>D:/04-go/src/github.com/chubaofs/chubaofs/java/target/libchubaofs-1.0-SNAPSHOT-jar-with-dependencies.jar</systemPath>
+            <systemPath>D:/04-go/src/github.com/chubaofs/chubaofs/java/target/libchubaofs-1.0-SNAPSHOT.jar</systemPath>
             -->
         </dependency>
         <dependency>
@@ -36,7 +36,7 @@
             <version>${hadoopVersion}</version>
             <!--
             <scope>system</scope>
-            <systemPath>C:/Users/zhangzhenshan3/.m2/repository/org/apache/hadoop/hadoop-common-test/3.0.0/hadoop-common-3.0.0-tests.jar</systemPath>
+            <systemPath>D:/02-projects/hadoop/hadoop-3.3.0/share/hadoop/common/hadoop-common-3.3.0-tests.jar</systemPath>
             -->
         </dependency>
 
